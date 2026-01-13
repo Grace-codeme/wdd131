@@ -1,0 +1,98 @@
+:root {
+    --accent1-color: #264653;
+    --heading-font: serif, "Times New Roman", "Georgia";
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+    margin: 20px auto;
+    padding: 0;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header span#course-title {
+    color: white;
+    background-color: var(--accent1-color);
+    padding: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.918);
+}
+
+nav a {
+    color: white;
+    margin: 0 100px;
+}
+
+main h1 {
+    text-align: center;
+    margin: 50px;
+}
+
+.card h2 {
+    margin: 0 auto;
+    background-color: var(--accent1-color);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    margin-right: 40px;
+}
+
+.card-container {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 700px;
+    border-top: 1px solid rgba(0, 0, 0, 0.918);
+    background: white;
+    margin: 0 auto;
+}
+
+.card p {
+    letter-spacing: 1.6px;
+    line-height: 2.6;
+}
+
+.card h3 {
+    margin: 0 auto;
+    background-color: var(--accent1-color);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: var(--accent1-color);
+    color: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.918);
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
