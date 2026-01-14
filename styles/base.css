@@ -40,9 +40,14 @@ nav {
     background-color: rgba(0, 0, 0, 0.918);
 }
 
-nav a {
+nav a{
     color: white;
-    margin: 0 100px;
+    margin: 0 auto;
+    transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent1-color);
 }
 
 main h1 {
