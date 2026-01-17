@@ -1,3 +1,4 @@
+
 :root {
     --accent1-color: #264653;
     --heading-font: serif, "Times New Roman", "Georgia";
@@ -20,6 +21,11 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+}
+
 header span#course-title {
     color: white;
     background-color: var(--accent1-color);
@@ -40,7 +46,7 @@ nav {
     background-color: rgba(0, 0, 0, 0.918);
 }
 
-nav a{
+nav a {
     color: white;
     margin: 0 auto;
     transition: background-color 0.2s ease;
@@ -50,12 +56,30 @@ nav a:hover {
     background-color: var(--accent1-color);
 }
 
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 main h1 {
     text-align: center;
     margin: 50px;
 }
 
-.card h2 {
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 700px;
+    border-top: 1px solid rgba(0, 0, 0, 0.918);
+    background: white;
+    margin: 0 auto;
+}
+
+.card h3 {
     margin: 0 auto;
     background-color: var(--accent1-color);
     color: white;
@@ -70,27 +94,9 @@ main h1 {
     margin-right: 40px;
 }
 
-.card-container {
-    border: 2px solid #ccc;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 700px;
-    border-top: 1px solid rgba(0, 0, 0, 0.918);
-    background: white;
-    margin: 0 auto;
-}
-
 .card p {
     letter-spacing: 1.6px;
     line-height: 2.6;
-}
-
-.card h3 {
-    margin: 0 auto;
-    background-color: var(--accent1-color);
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
 }
 
 footer {
