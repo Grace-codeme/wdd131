@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+main {
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+main figure {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+} 
+
+nav { 
+    display: flex;
+    justify-content: space-between;
+    background-color: purple;
+    padding: 15px;
+} 
+nav a {
+    color: white;
+    padding: 8px 16px;
+}
+
+nav a:hover {
+    color: purple;
+    background-color: white;
+    transition: 0.3s;
+}
+footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.918);
+    text-align: center;
+    padding: 10px; 
+    background-color: purple;
+    color: white;
+}
