@@ -1,40 +1,115 @@
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} 
-main {
-    max-width: 800px;
-    margin: 0 auto;
-
 }
 
-main figure {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-} 
+body {
+    font-family: 'Arimo', sans-serif;
+}
 
-nav { 
+header {
+    background:#264653;
+    padding: 40px;
     display: flex;
     justify-content: space-between;
-    background-color: purple;
-    padding: 15px;
-} 
+    align-items: center;
+}
+
+header p {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 1em;
+}
+
 nav a {
     color: white;
-    padding: 8px 16px;
+    font-weight: bold;
+    padding: 0.5em;
+    margin-left: 80px;
 }
 
 nav a:hover {
-    color: purple;
-    background-color: white;
+    background: white;
+    color: #264653;
     transition: 0.3s;
 }
-footer {
-    border-top: 1px solid rgba(0, 0, 0, 0.918);
+
+main {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+h1 {
     text-align: center;
-    padding: 10px; 
-    background-color: purple;
+    color: #264653;
+    grid-column: 1 / -1;
+    margin-bottom: 50px;
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    height: auto;
+    box-shadow: 0 0 70px rgba(0, 0, 0, 0.1);
+    border: 1px solid #264653;
+}
+
+footer {
+    background: #264653;
     color: white;
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #080404;
+}
+
+#menu {
+    display: none;
+    color:white;
+}
+
+@media (max-width: 768px) {
+    #menu {
+        display: block;
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        background: none;
+        border: 0;
+        font-size: 1.5rem;
+    }
+
+    #menu::before {
+        content: '☰';
+    }
+
+    #menu.open::before {
+        content: '✖';
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #264653;
+        padding: 1em;
+    }
+
+    nav.open {
+        display: flex;
+        top: 100px;
+    }
 }
