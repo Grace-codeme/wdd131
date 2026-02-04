@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigeria Info</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        Nigeria
+    </header>
+    <main>
+        <picture>
+            <source media="(min-width: 768px)" srcset="images/eaglehero.jpg">
+            <img src="images/eaglemedium.jpg" alt="Nigeria Eagle" class="hero-image">
+        </picture>
+
+        <section class="data-box" id="info-box">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 923,768 sq km</li>
+                <li><strong>Population:</strong> 230 million</li>
+                <li><strong>Capital:</strong> Abuja</li>
+                <li><strong>Languages:</strong> English, Hausa, Igbo, Yoruba</li>
+                <li><strong>Currency:</strong> Naira (NGN)</li>
+                <li><strong>Time Zone:</strong> UTC+1</li>
+            </ul>
+        </section>
+
+        <section class="data-box" id="weather-box">
+            <h2>Weather <img src="images/sunny.png" alt="sunny icon" class="icon"></h2>
+            <ul>
+                <li><strong>Temperature:</strong> 28°C</li>
+                <li><strong>Conditions:</strong> Partly Cloudy 🌤️</li>
+                <li><strong>Wind:</strong> 15 km/h</li>
+                <li><strong>Wind Chill:</strong> <span id="windChill"></span></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🤍Abdullahi Grace🤍. Ibadan, Nigeria.</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
