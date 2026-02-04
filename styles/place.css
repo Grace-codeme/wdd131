@@ -1,0 +1,79 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header,
+footer {
+    background-color: #008751;
+    /* Nigerian Green */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    position: relative;
+    /* Essential for positioning boxes on top of image */
+    display: block;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Box Styling (Mobile First) */
+.data-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #008751;
+    padding: 10px;
+    margin: 10px;
+    /* Stacks them with space on mobile */
+}
+
+.data-box h2 {
+    background-color: #008751;
+    color: white;
+    padding: 5px;
+    margin: -10px -10px 10px -10px;
+    /* Makes the title bar touch the edges */
+    text-align: center;
+}
+
+.icon {
+    width: 25px;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Large screen styles - Matching your wireframe */
+@media (min-width: 768px) {
+    .data-box {
+        position: absolute;
+        width: 250px;
+    }
+
+    #info-box {
+        top: 40px;
+        left: 40px;
+        /* Matches the 'Data' box in your sketch */
+    }
+
+    #weather-box {
+        bottom: 40px;
+        /* Positions it lower */
+        right: 40px;
+        /* Matches the 'Weather' box in your sketch */
+    }
+}
