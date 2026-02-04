@@ -1,21 +1,36 @@
-/* General Styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+/* 1. Added :root variables as required by audit */
+:root {
+    --primary-green: #008751;
+    --secondary-white: #ffffff;
+    --accent-gray: #f0f0f0;
+    --shadow: rgba(0, 0, 0, 0.2);
+    --border-color: #ccc;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--accent-gray);
+}
+
+/* 2. Using variables for colors */
 header,
 footer {
-    background-color: #008751;
-    /* Nigerian Green */
-    color: white;
+    background-color: var(--primary-green);
+    color: var(--secondary-white);
     text-align: center;
-    padding: 1rem;
+    padding: 10px;
+}
+
+/* Header now contains the required <h1> */
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
 }
 
 main {
     position: relative;
-    /* Essential for positioning boxes on top of image */
     display: block;
 }
 
@@ -25,55 +40,69 @@ main {
     display: block;
 }
 
-/* Box Styling (Mobile First) */
+/* 3. Box styling with variables */
 .data-box {
     background-color: rgba(255, 255, 255, 0.9);
-    border: 1px solid #008751;
-    padding: 10px;
-    margin: 10px;
-    /* Stacks them with space on mobile */
+    border: 1px solid var(--border-color);
+    padding: 0;
+    margin: 20px;
+    box-shadow: 0 4px 8px var(--shadow);
 }
 
 .data-box h2 {
-    background-color: #008751;
-    color: white;
-    padding: 5px;
-    margin: -10px -10px 10px -10px;
-    /* Makes the title bar touch the edges */
-    text-align: center;
+    background-color: var(--primary-green);
+    color: var(--secondary-white);
+    margin: 0;
+    padding: 10px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.data-box ul {
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+}
+
+.data-box li {
+    margin-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
+}
+
+
+.data-box li strong {
+    color: var(--primary-green);
+    margin-right: 5px;
 }
 
 .icon {
-    width: 25px;
+    width: 30px;
     height: auto;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+/* 4. Footer pseudo-element requirement */
+footer p::after {
+    content: " 🇳🇬";
 }
 
-li {
-    margin-bottom: 5px;
-}
-
-/* Large screen styles - Matching your wireframe */
+/* 5. Desktop positioning (Floating boxes) */
 @media (min-width: 768px) {
-    .data-box {
-        position: absolute;
-        width: 250px;
-    }
-
     #info-box {
-        top: 40px;
-        left: 40px;
-        /* Matches the 'Data' box in your sketch */
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 300px;
+        z-index: 10;
     }
 
     #weather-box {
-        bottom: 40px;
-        /* Positions it lower */
-        right: 40px;
-        /* Matches the 'Weather' box in your sketch */
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        width: 300px;
+        z-index: 10;
     }
 }
