@@ -1,0 +1,86 @@
+:root {
+    --primary: #0e0030;
+    --accent: #d1cbd6;
+    --text-color: #1a1a1a;
+    --required-red: #b30000;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header,
+footer {
+    background-color: var(--primary);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    background-color: var(--accent);
+    margin: 20px auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 480px;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.required-clue {
+    color: var(--required-red);
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #777;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.rating-area {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.submit-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #444;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #e0e0e0;
+}
