@@ -84,3 +84,20 @@ textarea {
 .submit-btn:hover {
     background-color: #e0e0e0;
 }
+
+/* Media Query to satisfy Audit Requirement and improve Desktop view */
+@media (min-width: 600px) {
+    main {
+        margin: 40px auto;
+        padding: 40px;
+        max-width: 600px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .rating-area {
+        justify-content: space-around;
+    }
+}
