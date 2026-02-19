@@ -3,7 +3,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f1f1f1;
+    /* Matches your Site Plan */
 }
 
 header {
@@ -23,37 +24,103 @@ nav a {
     font-weight: bold;
 }
 
-/* Responsive Grid (Requirement) */
-#feature-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* Mobile */
-    gap: 1rem;
-    padding: 1rem;
+nav a:hover {
+    text-decoration: underline;
 }
 
+/* Responsive Grid for Features & Gallery (Requirement) */
+#feature-container,
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Mobile view */
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Desktop View - PARC Principles (Requirement) */
 @media (min-width: 600px) {
-    #feature-container {
+
+    #feature-container,
+    .image-grid {
         grid-template-columns: repeat(3, 1fr);
-        /* Desktop */
     }
 }
 
-.info-card {
+/* Card & Figure Styling */
+.info-card,
+figure {
     background: white;
-    padding: 1rem;
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid #3498db;
+    /* Consistent accent color */
+    margin: 0;
 }
 
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+figcaption {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Form Styling (Requirement) */
+form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 1.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Footer Styling */
 footer {
     text-align: center;
-    background: #333;
+    background: #3498db;
     color: white;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
 }
 
 footer a {
-    color: #3498db;
+    color: #f1f1f1;
+    text-decoration: none;
 }
